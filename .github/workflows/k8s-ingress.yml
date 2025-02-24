@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted  # Use the self-hosted runner for test
+    runs-on: Windows  # Use the self-hosted runner for test
 
     steps:
       # Checkout the repository
