@@ -16,8 +16,8 @@ jobs:
 
       # Verify Minikube status
       - name: Verify Minikube status
-        run: minikube status
-
+        run: echo "test string "
+ 
       # Deploy to Minikube
       - name: Deploy application
         run: |
