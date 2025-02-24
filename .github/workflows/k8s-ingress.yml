@@ -14,9 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Verify Minikube status
-      - name: Verify Minikube status
-        run: echo "test string "
+ 
  
       # Deploy to Minikube
       - name: Deploy application
