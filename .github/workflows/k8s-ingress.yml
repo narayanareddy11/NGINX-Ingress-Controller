@@ -1,0 +1,26 @@
+name: Deploy to Minikube on Self-Hosted Runner
+
+on:
+  push:
+    branches:
+      - main  # Trigger on pushes to the main branch
+
+jobs:
+  deploy:
+    runs-on: self-hosted-k8s  # Use the self-hosted runner
+
+    steps:
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Verify Minikube status
+      - name: Verify Minikube status
+        run: minikube status
+
+      # Deploy to Minikube
+      - name: Deploy application
+        run: |
+          kubectl apply -f k8s/deployment.yaml
+          kubectl apply -f k8s/service.yaml
+          kubectl apply -f k8s/ingress.yaml
