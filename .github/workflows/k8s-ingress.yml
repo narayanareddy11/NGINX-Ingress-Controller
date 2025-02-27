@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: Linux  # Use the self-hosted runner for test
+    runs-on: self-hosted  # Use the self-hosted runner for test
 
     steps:
       # Checkout the repository
