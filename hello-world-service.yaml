@@ -7,5 +7,7 @@ spec:
     app: hello-world
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 80            # The port that the service exposes internally in the cluster
+      targetPort: 8080     # The port on the container that the service routes traffic to
+      nodePort: 30001      # The port on each node (NodePort) where the service can be accessed externally
+  type: NodePort 
