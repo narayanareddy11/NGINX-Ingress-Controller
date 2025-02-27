@@ -22,3 +22,7 @@ jobs:
           kubectl apply -f hello-world-deployment.yaml
           kubectl apply -f hello-world-service.yaml
           kubectl apply -f hello-world-ingress.yaml
+      - name: Use Minikube IP and NodePort
+        run: |
+          MINIKUBE_IP=$(minikube ip)
+          echo "Access service at http://$MINIKUBE_IP:$NODE_PORT"
