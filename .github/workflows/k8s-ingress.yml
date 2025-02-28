@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted  # Use the self-hosted runner for test
+    runs-on: k8s  # Use the self-hosted runner for test
 
     steps:
       # Checkout the repository
@@ -26,4 +26,3 @@ jobs:
         run: |
           MINIKUBE_IP=$(minikube ip)
           echo "Access service at http://$MINIKUBE_IP:$NODE_PORT"
-          
