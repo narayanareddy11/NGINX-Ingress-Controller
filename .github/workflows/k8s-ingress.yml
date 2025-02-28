@@ -26,3 +26,4 @@ jobs:
         run: |
           MINIKUBE_IP=$(minikube ip)
           echo "Access service at http://$MINIKUBE_IP:$NODE_PORT"
+          
